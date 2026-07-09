@@ -1,0 +1,84 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dyeGradient" gradientUnits="userSpaceOnUse" x1="62" y1="95" x2="330" y2="240">
+      <stop offset="0%" stop-color="#ff6452" />
+      <stop offset="48%" stop-color="#ffc53d" />
+      <stop offset="100%" stop-color="#1c8c82" />
+    </linearGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="45" /></filter>
+    <filter id="blur2"><feGaussianBlur stdDeviation="38" /></filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="#faf3e7" />
+  <circle cx="1120" cy="60" r="180" fill="#1c8c82" opacity="0.16" filter="url(#blur1)" />
+  <circle cx="60" cy="560" r="150" fill="#ffc53d" opacity="0.2" filter="url(#blur2)" />
+
+  <!-- logo mark -->
+  <g transform="translate(90,72)">
+    <circle cx="0" cy="0" r="34" fill="none" stroke="#24201b" stroke-width="1.6" stroke-dasharray="3.6 3.6" opacity="0.35" />
+    <circle cx="0" cy="0" r="26" fill="#ff6452" />
+    <g fill="#faf3e7">
+      <ellipse cx="0" cy="7" rx="11.5" ry="9.2" />
+      <ellipse cx="-14.5" cy="-8.5" rx="5.1" ry="6.6" transform="rotate(-18 -14.5 -8.5)" />
+      <ellipse cx="-3" cy="-16.5" rx="5.6" ry="7" transform="rotate(-4 -3 -16.5)" />
+      <ellipse cx="9.5" cy="-15" rx="5.6" ry="7" transform="rotate(10 9.5 -15)" />
+      <ellipse cx="18" cy="-6" rx="5.1" ry="6.6" transform="rotate(24 18 -6)" />
+    </g>
+  </g>
+  <text x="140" y="65" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#24201b">Sebastian&#8217;s</text>
+  <text x="140" y="90" font-family="Consolas, monospace" font-size="14" letter-spacing="3" fill="#5a5148">PET GROOMING</text>
+
+  <!-- eyebrow pill -->
+  <rect x="90" y="150" width="290" height="40" rx="20" fill="#f2e8d8" stroke="#d8c9b4" />
+  <circle cx="114" cy="170" r="5" fill="#1c8c82" />
+  <text x="132" y="176" font-family="Consolas, monospace" font-size="15" letter-spacing="1.5" fill="#5a5148">RIALTO, CA &#183; NOW BOOKING</text>
+
+  <!-- headline -->
+  <text x="88" y="272" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" fill="#24201b">Every good dog</text>
+  <text x="88" y="342" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" fill="#24201b">deserves a</text>
+  <text x="88" y="412" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" fill="#24201b">great groom.</text>
+  <path d="M90 428 Q 220 414, 320 426 T 470 422" stroke="#ff6452" stroke-width="8" fill="none" stroke-linecap="round" />
+
+  <text x="90" y="500" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#5a5148">Deshedding &#183; Full Grooming &#183; Creative Color &#183; Baths &amp; Cuts</text>
+
+  <!-- footer caption -->
+  <g transform="translate(90,560)">
+    <circle cx="8" cy="-5" r="9" fill="#24201b" />
+    <g fill="#faf3e7" transform="translate(8,-5) scale(0.34)">
+      <ellipse cx="0" cy="7" rx="11.5" ry="9.2" />
+      <ellipse cx="-14.5" cy="-8.5" rx="5.1" ry="6.6" transform="rotate(-18 -14.5 -8.5)" />
+      <ellipse cx="-3" cy="-16.5" rx="5.6" ry="7" transform="rotate(-4 -3 -16.5)" />
+      <ellipse cx="9.5" cy="-15" rx="5.6" ry="7" transform="rotate(10 9.5 -15)" />
+      <ellipse cx="18" cy="-6" rx="5.1" ry="6.6" transform="rotate(24 18 -6)" />
+    </g>
+    <text x="30" y="0" font-family="Consolas, monospace" font-size="18" fill="#24201b">sebastians-pet-grooming.vercel.app</text>
+  </g>
+
+  <!-- dog illustration, static fully-colored -->
+  <g transform="translate(660,110) scale(1.32)">
+    <ellipse cx="205" cy="272" rx="140" ry="12" fill="#d8c9b4" opacity="0.4" />
+    <ellipse cx="86" cy="168" rx="19" ry="36" fill="#5a5148" opacity="0.85" transform="rotate(12 86 168)" />
+    <g fill="#5a5148" opacity="0.9">
+      <rect x="163" y="232" width="20" height="46" rx="10" />
+      <rect x="196" y="238" width="20" height="42" rx="10" />
+      <rect x="229" y="236" width="20" height="44" rx="10" />
+    </g>
+    <g fill="url(#dyeGradient)">
+      <circle cx="150" cy="195" r="52" /><circle cx="205" cy="178" r="60" /><circle cx="254" cy="196" r="50" />
+      <circle cx="183" cy="222" r="46" /><circle cx="226" cy="220" r="44" /><circle cx="202" cy="150" r="40" />
+      <circle cx="98" cy="152" r="36" /><circle cx="122" cy="130" r="32" /><circle cx="138" cy="158" r="27" /><circle cx="106" cy="121" r="25" />
+      <circle cx="300" cy="148" r="24" /><circle cx="319" cy="138" r="20" /><circle cx="308" cy="164" r="18" />
+    </g>
+    <g stroke="#24201b" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.9">
+      <circle cx="150" cy="195" r="52" /><circle cx="205" cy="178" r="60" /><circle cx="254" cy="196" r="50" />
+      <circle cx="183" cy="222" r="46" /><circle cx="226" cy="220" r="44" /><circle cx="202" cy="150" r="40" />
+      <circle cx="98" cy="152" r="36" /><circle cx="122" cy="130" r="32" /><circle cx="138" cy="158" r="27" /><circle cx="106" cy="121" r="25" />
+      <circle cx="300" cy="148" r="24" /><circle cx="319" cy="138" r="20" /><circle cx="308" cy="164" r="18" />
+    </g>
+    <path d="M118 168 L162 190 L104 196 Z" fill="#ff6452" stroke="#24201b" stroke-width="2.5" stroke-linejoin="round" />
+    <circle cx="130" cy="180" r="4" fill="#faf3e7" />
+    <circle cx="93" cy="140" r="4.5" fill="#24201b" />
+    <ellipse cx="66" cy="150" rx="7" ry="5" fill="#24201b" />
+    <path d="M66 155 Q70 162 76 156" stroke="#24201b" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  </g>
+</svg>
