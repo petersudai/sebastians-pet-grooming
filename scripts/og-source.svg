@@ -9,12 +9,16 @@
     <filter id="blur2"><feGaussianBlur stdDeviation="38" /></filter>
   </defs>
 
+  <!-- Full canvas is 1200x630, but WhatsApp/Messenger center-crop link
+       previews toward a squarer ratio, so every meaningful element below
+       is kept within roughly x:300-900 (the safe zone that survives that
+       crop). Only the decorative corner blobs are allowed to fall outside it. -->
   <rect width="1200" height="630" fill="#faf3e7" />
   <circle cx="1120" cy="60" r="180" fill="#1c8c82" opacity="0.16" filter="url(#blur1)" />
   <circle cx="60" cy="560" r="150" fill="#ffc53d" opacity="0.2" filter="url(#blur2)" />
 
-  <!-- logo mark -->
-  <g transform="translate(90,72)">
+  <!-- logo lockup, centered -->
+  <g transform="translate(515,60)">
     <circle cx="0" cy="0" r="34" fill="none" stroke="#24201b" stroke-width="1.6" stroke-dasharray="3.6 3.6" opacity="0.35" />
     <circle cx="0" cy="0" r="26" fill="#ff6452" />
     <g fill="#faf3e7">
@@ -25,37 +29,22 @@
       <ellipse cx="18" cy="-6" rx="5.1" ry="6.6" transform="rotate(24 18 -6)" />
     </g>
   </g>
-  <text x="140" y="65" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#24201b">Sebastian&#8217;s</text>
-  <text x="140" y="90" font-family="Consolas, monospace" font-size="14" letter-spacing="3" fill="#5a5148">PET GROOMING</text>
+  <text x="555" y="52" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#24201b">Sebastian&#8217;s</text>
+  <text x="555" y="77" font-family="Consolas, monospace" font-size="14" letter-spacing="3" fill="#5a5148">PET GROOMING</text>
 
-  <!-- eyebrow pill -->
-  <rect x="90" y="150" width="290" height="40" rx="20" fill="#f2e8d8" stroke="#d8c9b4" />
-  <circle cx="114" cy="170" r="5" fill="#1c8c82" />
-  <text x="132" y="176" font-family="Consolas, monospace" font-size="15" letter-spacing="1.5" fill="#5a5148">RIALTO, CA &#183; NOW BOOKING</text>
+  <!-- eyebrow pill, centered -->
+  <rect x="455" y="118" width="290" height="40" rx="20" fill="#f2e8d8" stroke="#d8c9b4" />
+  <circle cx="490" cy="138" r="5" fill="#1c8c82" />
+  <text x="505" y="144" font-family="Consolas, monospace" font-size="15" letter-spacing="1.5" fill="#5a5148">RIALTO, CA &#183; NOW BOOKING</text>
 
-  <!-- headline -->
-  <text x="88" y="272" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" fill="#24201b">Every good dog</text>
-  <text x="88" y="342" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" fill="#24201b">deserves a</text>
-  <text x="88" y="412" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" fill="#24201b">great groom.</text>
-  <path d="M90 428 Q 220 414, 320 426 T 470 422" stroke="#ff6452" stroke-width="8" fill="none" stroke-linecap="round" />
+  <!-- headline, each line centered independently so it survives a tighter crop -->
+  <text x="600" y="228" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="800" fill="#24201b">Every good dog</text>
+  <text x="600" y="288" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="800" fill="#24201b">deserves a</text>
+  <text x="600" y="348" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="800" fill="#24201b">great groom.</text>
+  <path d="M470 364 Q 535 352, 600 362 T 730 358" stroke="#ff6452" stroke-width="7" fill="none" stroke-linecap="round" />
 
-  <text x="90" y="500" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#5a5148">Deshedding &#183; Full Grooming &#183; Creative Color &#183; Baths &amp; Cuts</text>
-
-  <!-- footer caption -->
-  <g transform="translate(90,560)">
-    <circle cx="8" cy="-5" r="9" fill="#24201b" />
-    <g fill="#faf3e7" transform="translate(8,-5) scale(0.34)">
-      <ellipse cx="0" cy="7" rx="11.5" ry="9.2" />
-      <ellipse cx="-14.5" cy="-8.5" rx="5.1" ry="6.6" transform="rotate(-18 -14.5 -8.5)" />
-      <ellipse cx="-3" cy="-16.5" rx="5.6" ry="7" transform="rotate(-4 -3 -16.5)" />
-      <ellipse cx="9.5" cy="-15" rx="5.6" ry="7" transform="rotate(10 9.5 -15)" />
-      <ellipse cx="18" cy="-6" rx="5.1" ry="6.6" transform="rotate(24 18 -6)" />
-    </g>
-    <text x="30" y="0" font-family="Consolas, monospace" font-size="18" fill="#24201b">sebastians-pet-grooming.vercel.app</text>
-  </g>
-
-  <!-- dog illustration, static fully-colored -->
-  <g transform="translate(660,110) scale(1.32)">
+  <!-- dog illustration, static fully-colored, centered under the headline -->
+  <g transform="translate(344,235) scale(1.25)">
     <ellipse cx="205" cy="272" rx="140" ry="12" fill="#d8c9b4" opacity="0.4" />
     <ellipse cx="86" cy="168" rx="19" ry="36" fill="#5a5148" opacity="0.85" transform="rotate(12 86 168)" />
     <g fill="#5a5148" opacity="0.9">
@@ -80,5 +69,18 @@
     <circle cx="93" cy="140" r="4.5" fill="#24201b" />
     <ellipse cx="66" cy="150" rx="7" ry="5" fill="#24201b" />
     <path d="M66 155 Q70 162 76 156" stroke="#24201b" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- footer caption, centered -->
+  <g transform="translate(414,605)">
+    <circle cx="8" cy="-5" r="9" fill="#24201b" />
+    <g fill="#faf3e7" transform="translate(8,-5) scale(0.34)">
+      <ellipse cx="0" cy="7" rx="11.5" ry="9.2" />
+      <ellipse cx="-14.5" cy="-8.5" rx="5.1" ry="6.6" transform="rotate(-18 -14.5 -8.5)" />
+      <ellipse cx="-3" cy="-16.5" rx="5.6" ry="7" transform="rotate(-4 -3 -16.5)" />
+      <ellipse cx="9.5" cy="-15" rx="5.6" ry="7" transform="rotate(10 9.5 -15)" />
+      <ellipse cx="18" cy="-6" rx="5.1" ry="6.6" transform="rotate(24 18 -6)" />
+    </g>
+    <text x="30" y="0" font-family="Consolas, monospace" font-size="18" fill="#24201b">sebastians-pet-grooming.vercel.app</text>
   </g>
 </svg>
