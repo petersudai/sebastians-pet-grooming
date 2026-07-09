@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paper + ink, the ticket-stock foundation */
+  --color-paper: #faf3e7;
+  --color-paper-dim: #f2e8d8;
+  --color-ink: #24201b;
+  --color-ink-soft: #5a5148;
+
+  /* Dye-color trio, the groomer's palette, used the way color shows up in the shop */
+  --color-coral: #ff6452;
+  --color-coral-dark: #e14a39;
+  --color-teal: #1c8c82;
+  --color-teal-dark: #146b63;
+  --color-butter: #ffc53d;
+
+  /* Structural */
+  --color-line: #d8c9b4;
+  --color-line-dark: #2f2a23;
+
+  --font-display: "Bricolage Grotesque", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --font-caption: "Caveat", cursive;
+
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-stamp: stamp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  --animate-paw-step: paw-step 20s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes paw-step {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--paw-rotate, 0deg)) scale(0.5);
+  }
+  3% {
+    opacity: var(--paw-opacity, 0.3);
+    transform: rotate(var(--paw-rotate, 0deg)) scale(1);
+  }
+  15% {
+    opacity: var(--paw-opacity, 0.3);
+    transform: rotate(var(--paw-rotate, 0deg)) scale(1);
+  }
+  18% {
+    opacity: 0;
+    transform: rotate(var(--paw-rotate, 0deg)) scale(0.85);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--paw-rotate, 0deg)) scale(0.85);
+  }
+}
+
+@keyframes stamp {
+  0% {
+    transform: scale(2.2) rotate(-18deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.92) rotate(-8deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-8deg);
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *{
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-coral);
+  color: var(--color-paper);
+}
+
+/* Perforated ticket edge, reused wherever a card wants to feel torn off a roll */
+.ticket-edge {
+  position: relative;
+}
+.ticket-edge::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 1px;
+  background-image: radial-gradient(circle, var(--color-paper) 1.5px, transparent 1.6px);
+  background-size: 10px 3px;
+  background-repeat: repeat-x;
+}
